@@ -2,8 +2,15 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from .serializers import WhiskeySerializer
-from .models import Whiskey
+from .serializers import WhiskeySerializer, UserNumbersSerializer
+from .models import Whiskey, UserNumbers
+
+class NumbersView(APIView):
+    def get(self, request):
+        user_numbers = UserNumbers.objects.get(id=1)
+        numbers_seriazlier = UserNumbersSerializer(user_numbers)
+
+        return Response(numbers_seriazlier.data)
 
 class RessultView(APIView):
     def post(self, request):
@@ -48,4 +55,10 @@ class RessultView(APIView):
             whiskey = Whiskey.objects.get(id=12)
 
         whiskey_serializer = WhiskeySerializer(whiskey, context={'request': request})
+
+        user_numbers = UserNumbers.objects.get(id=1)
+        user_numbers.number += 1
+        user_numbers.save()
+
         return Response(whiskey_serializer.data)
+    
