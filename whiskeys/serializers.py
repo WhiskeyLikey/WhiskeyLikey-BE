@@ -5,7 +5,7 @@ class UserNumbersSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = UserNumbers
-        fields = '__all__'
+        fields = ['number']
 
 class WhiskeySerializer(serializers.ModelSerializer):
 
