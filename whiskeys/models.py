@@ -37,3 +37,5 @@ class Whiskey(models.Model):
     def __str__(self):
         return self.name
 
+class UserNumbers(models.Model):
+    number = models.IntegerField()
