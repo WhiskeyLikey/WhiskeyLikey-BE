@@ -9,11 +9,11 @@ class UserNumbersSerializer(serializers.ModelSerializer):
 
 class WhiskeySerializer(serializers.ModelSerializer):
 
-    flavor = serializers.SerializerMethodField()
-    def get_flavor(self, instance):
-        flavors = instance.flavor.all()
-        flavors_names = [f.name for f in flavors]
-        return flavors_names
+    # flavor = serializers.SerializerMethodField()
+    # def get_flavor(self, instance):
+    #     flavors = instance.flavor.all()
+    #     flavors_names = [f.name for f in flavors]
+    #     return flavors_names
     
     flavor_images = serializers.SerializerMethodField()
     def get_flavor_images(self, instance):
@@ -27,11 +27,11 @@ class WhiskeySerializer(serializers.ModelSerializer):
 
         return flavors_images
     
-    drink = serializers.SerializerMethodField()
-    def get_drink(self, instance):
-        drinks = instance.drink.all()
-        drinks_names = [d.name for d in drinks]
-        return drinks_names
+    # drink = serializers.SerializerMethodField()
+    # def get_drink(self, instance):
+    #     drinks = instance.drink.all()
+    #     drinks_names = [d.name for d in drinks]
+    #     return drinks_names
     
     drink_images = serializers.SerializerMethodField()
     def get_drink_images(self, instance):
@@ -51,8 +51,8 @@ class WhiskeySerializer(serializers.ModelSerializer):
             'name',
             'description',
             'whiskey_image',
-            'flavor',
+            # 'flavor',
             'flavor_images',
-            'drink',
+            # 'drink',
             'drink_images',
         ]
