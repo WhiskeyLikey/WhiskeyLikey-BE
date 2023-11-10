@@ -18,37 +18,37 @@ class RessultView(APIView):
         result = data['result']
         print()
         # 조니워커 레드라벨
-        if result == 'NNNBSNN':
+        if result == 'NNNSNN' or result == 'NNNBNN':
             whiskey = Whiskey.objects.get(id=1)
         # 조니워커 더블블랙라벨
-        elif result == 'NNYBSYY' or result == 'NNYBTYY' or result == 'NNYSTYY' or result == 'NNYBSNY' or result == 'NNYBTNY' or result == 'NNYSTNY' or result == 'NNYBSYN' or result == 'NNYBTYN' or result == 'NNYSTYN' or result == 'NNYBSNN' or result == 'NNYBTNN' or result == 'NNYSTNN':
+        elif result == 'NNYBYY' or result == 'NNYTYY' or result == 'NNYSYY' or result == 'NNYBNY' or result == 'NNYTNY' or result == 'NNYSNY' or result == 'NNYBYN' or result == 'NNYTYN' or result == 'NNYSYN' or result == 'NNYBNN' or result == 'NNYTNN' or result == 'NNYSNN':
             whiskey = Whiskey.objects.get(id=2)
         # 조니워커 그린라벨
-        elif result == 'YYYFTYY' or result == 'YYYSTYY' or result == 'YYYFTYN' or result == 'YYYSTYN' or result == 'YNYFTYY' or result == 'YNYSTYY' or result == 'YNYFTYN' or result == 'YNYSTYN':
+        elif result == 'YYYSYY' or result == 'YNYTYY' or result == 'YNYTYN':
             whiskey = Whiskey.objects.get(id=3)
         # 조니워커 골드라벨 리저브
-        elif result == 'YNYBFYY' or result == 'YNYBSYY' or result == 'YNYFSYY':
+        elif result == 'YNYBYY':
             whiskey = Whiskey.objects.get(id=4)
         # 조니워커 플래티넘 라벨
-        elif result == 'YYYFSYY' or result == 'YYYFSYN' or result == 'YNYFSYN':
+        elif result == 'YYYFYY' or result == 'YYYFYN' or result == 'YNYFYN':
             whiskey = Whiskey.objects.get(id=5)
         # 발렌타인 파이니스트
-        elif result == 'NNNBSYN' or result == 'NNNBTYN' or result == 'NNNSTYN':
+        elif result == 'NNNBYN' or result == 'NNNSYN':
             whiskey = Whiskey.objects.get(id=6)
         # 발렌타인 12년
         elif result == 'NYNBYY':
             whiskey = Whiskey.objects.get(id=7)
         # 발렌타인 17년
-        elif result == 'YYYBSYY' or result == 'YYYBSYN':
+        elif result == 'YYYBYY' or result == 'YYYSYN':
             whiskey = Whiskey.objects.get(id=8)
         # 제임스 스탠다드
-        elif result == 'YYNBFNY' or result == 'NYNBFNY':
+        elif result == 'YYNBNY' or result == 'NYNFNY':
             whiskey = Whiskey.objects.get(id=9)
         # 시바스 리갈 12년산
-        elif result == 'YYYBFYY' or result == 'YYYBFYN' or result == 'YYNBFYY' or result == 'YYNBFYN':
+        elif result == 'YYYBYN' or result == 'YYNFYY' or result == 'YYNFYN':
             whiskey = Whiskey.objects.get(id=10)
         # 시바스 리갈 18년산
-        elif result == 'YYYFSNY':
+        elif result == 'YYYFNY' or result == 'YYYSNY':
             whiskey = Whiskey.objects.get(id=11)
         # 조니워커 블랙라벨
         else:
