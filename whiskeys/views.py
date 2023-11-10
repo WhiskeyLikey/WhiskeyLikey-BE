@@ -15,8 +15,9 @@ class NumbersView(APIView):
 class RessultView(APIView):
     def post(self, request):
         data = request.data
-        result = data['result']
-        print()
+        r = data['result']
+        result = "".join(r)
+
         # 조니워커 레드라벨
         if result == 'NNNSNN' or result == 'NNNBNN':
             whiskey = Whiskey.objects.get(id=1)
