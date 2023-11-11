@@ -88,6 +88,9 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     # 프론트 주소 추가
+    'http://3.90.21.108:3000',
+    'http://3.90.21.108',
+    'http://3.90.21.108:5173'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = False
