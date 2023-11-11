@@ -261,6 +261,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-secret.json
 
 # End of https://www.toptal.com/developers/gitignore/api/django,macos,windows,venv,visualstudiocode
